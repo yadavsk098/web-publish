@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyprees</title>
+</head>
+
+<body>
+    <h1>Press keys to navigate:</h1>
+    <p>Press "H" to go to Home</p>
+    <p>Press "C" to go to Contact</p>
+
+    <script>
+        document.addEventListener('keydown', function(event) {
+            const key = event.key.toLowerCase();
+            if (key === 'h') {
+                window.location.href = 'index.html'; // Navigate to the Home page
+            } else if (key === 'c') {
+                window.location.href = 'contact.html'; // Navigate to the Contact page
+            }
+        });
+
+        document.addEventListener('keydown', function(event) {
+            const key = event.key.toLowerCase();
+            if (key === 'h') {
+                window.location.href = 'index.html'; // Navigate to the Home page
+            } 
+            else if (key === 'b') {
+                window.location.href = 'book.html'; // Navigate to the Contact page
+            }
+            else if (key === 'n') {
+                window.location.href = 'news.html'; // Navigate to the Contact page
+            }
+            else if (key === 'm') {
+                window.location.href = 'music.html'; // Navigate to the Contact page
+            }
+            else if (key === 'e') {
+                window.location.href = 'email.html'; // Navigate to the Contact page
+            }
+        });
+
+
+
+    </script>
+</body>
+
+</html>

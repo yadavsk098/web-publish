@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hover over elements to hear their descriptions and content</h1>
+    <div class="hover-speak" aria-label="This is a div element">
+        Hover over me
+    </div>
+    <button class="hover-speak" aria-label="This is a Send button">
+        Send
+    </button>
+    <p class="hover-speak" aria-label="This is a paragraph element with content">
+        This is a paragraph with some text content.
+    </p>
+
+    <script>
+        function speak(text) {
+            const utterance = new SpeechSynthesisUtterance(text);
+            window.speechSynthesis.speak(utterance);
+        }
+
+        const elements = document.querySelectorAll('.hover-speak');
+        elements.forEach(element => {
+            let spoken = false;
+            element.addEventListener('mouseover', function() {
+                if (!spoken) {
+                    const description = element.getAttribute('aria-label');
+                    const content = element.textContent;
+                    speak(`${description}. ${content}`);
+                    spoken = true;
+                }
+            });
+        });
+    </script>
+
+</html>

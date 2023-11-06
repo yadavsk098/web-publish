@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luminous</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<!-- npx tailwindcss -i ./src/input.css -o ./style.css --watch -->
+
+<body class="bg-white dark:bg-gray-800">
+  <div style="display: contents">
+    <header
+      class="sticky top-0 z-40 flex-none mx-auto w-full bg-white dark:bg-gray-900 fixed left-0 top-0 z-30 border-b border-gray-200 dark:border-gray-700">
+      <div class="w-full px-3 py-3 mx-auto lg:flex lg:justify-between max-w-8xl lg:px-3">
+        <nav
+          class="bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200 border-gray-100 dark:border-gray-700 divide-gray-100 dark:divide-gray-700 px-2 sm:px-4 py-2.5 w-full">
+          <div class="mx-auto flex flex-wrap justify-between items-center container">
+            <div class="flex justify-between w-full lg:w-auto">
+              <div class="flex items-center">
+                <a href="/" class="flex items-center"><span
+                    class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">&lt;
+                    Luminous&gt;Internet for all</span></a>
+              </div>
+              <div class="flex items-center lg:hidden">
+                <a href="#" target="_blank"
+                  class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1"><svg
+                    class="w-5 h-5" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"></svg></a>
+                <button aria-label="Dark mode" type="button"
+                  class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                  <span class="hidden dark:block"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"></svg></span>
+                  <span class="block dark:hidden"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"></svg></span>
+                </button>
+                <button type="button"
+                  class="focus:outline-none whitespace-normal m-0.5 rounded-lg focus:ring-2 p-1.5 focus:ring-gray-400 hover:bg-gray-100 dark:hover:bg-gray-600 ml-3 md:hidden"
+                  aria-label="Open main menu">
+                  <span class="sr-only">Open main menu</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" role="button" tabindex="0" width="24" height="24"
+                    class="h-6 w-6 shrink-0" aria-label="bars 3" fill="none" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      d="M4 6h16M4 12h16M4 18h16"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="flex items-center w-full lg:w-auto">
+              <div class="w-full md:block md:w-auto" hidden="true">
+                <ul class="flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                  <li>
+                    <a href="#"
+                      class="block py-2 pr-4 pl-3 md:p-0 rounded md:border-0 text-black bg-primary-700 md:bg-transparent md:text-primary-700 md:dark:text-white dark:bg-primary-600 md:dark:bg-transparent">Home</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="block py-2 pr-4 pl-3 md:p-0 rounded text-gray-700 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="block py-2 pr-4 pl-3 md:p-0 rounded text-gray-700 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sitemap</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="block py-2 pr-4 pl-3 md:p-0 rounded text-gray-700 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="lg:self-center flex items-center mb-4 lg:mb-0 hidden mr-3 lg:flex">
+                <div class="items-center mr-3 flex">
+                  <a href="#" target="_blank"
+                    class="hidden xl:inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1"><svg
+                      class="w-5 h-5" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github"
+                      role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"></svg></a>
+                  <button aria-label="Dark mode" type="button"
+                    class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                    <span class="hidden dark:block"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"></svg></span>
+                    <span class="block dark:hidden"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"></svg></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="bg-white dark:bg-gray-900" style="min-height: calc(100vh - 145px)">
+      <section class="bg-white dark:bg-gray-900">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:px-12">
+          <h1
+            class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+            A Comprehensive Tool for visually impaired
+          </h1>
+          <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+            asperiores quisquam inventore magni? Ex totam doloribus rem minus
+            magni adipisci ipsum aspernatur architecto nesciunt, explicabo
+            inventore repellat sint perspiciatis a ipsam repellendus!
+          </p>
+          <div class="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
+            <div class="relative w-full">
+              <div
+                class="flex absolute inset-y-0 items-center text-gray-500 dark:text-gray-400 left-0 pl-2.5 pointer-events-none">
+                <svg slot="left" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <input
+                class="block w-full disabled:cursor-not-allowed disabled:opacity-50 pl-11 focus:border-primary-500 focus:ring-primary-500 dark:focus:border-primary-500 dark:focus:ring-primary-500 bg-gray-50 text-gray-900 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 border-gray-300 dark:border-gray-600 sm:text-base rounded-lg"
+                placeholder="Search" type="search" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white dark:bg-gray-900">
+        <div class="py-4 px-4 mx-auto max-w-screen-xl">
+          <!-- // first daabba Music Reading -->
+          <div class="grid gap-2 space-y-0 grid-cols-2 lg:grid-cols-4">
+            <!-- <a aria-label="button" onmouseover="speakElementDescription(this)" class="bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400 rounded-lg border border-gray-200 dark:border-gray-700 divide-gray-200 dark:divide-gray-700 shadow-md flex max-w-sm flex-col hover:bg-gray-100 dark:hover:bg-gray-700 p-4 sm:p-6 items-center text-center"
+
+                            href=" #"><i class="icon-key mb-2 text-gray-500 dark:text-gray-400 text-4xl"></i>
+
+                            href="./book/index.html"><i class="icon-key mb-2 text-gray-500 dark:text-gray-400 text-4xl"></i>
+ -->
+
+            <a aria-label="button" onmouseover="speakElementDescription(this)"
+              class="bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400 rounded-lg border border-gray-200 dark:border-gray-700 divide-gray-200 dark:divide-gray-700 shadow-md flex max-w-sm flex-col hover:bg-gray-100 dark:hover:bg-gray-700 p-4 sm:p-6 items-center text-center"
+              href="./books-read/dist/index.html"><i
+                class="icon-key mb-2 text-gray-500 dark:text-gray-400 text-4xl"></i>
+
+              <h5 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">
+                Book Reading
+              </h5>
+            </a>
+
+            <!-- //second dabba News -->
+
+            <a aria-label="button" onmouseover="speakElementDescription(this)"
+              class="bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400 rounded-lg border border-gray-200 dark:border-gray-700 divide-gray-200 dark:divide-gray-700 shadow-md flex max-w-sm flex-col hover:bg-gray-100 dark:hover:bg-gray-700 p-4 sm:p-6 items-center text-center"
+              href="./newsss/news-website-main/news-website-main/index.html"><i
+                class="icon-palette mb-2 text-gray-500 dark:text-gray-400 text-4xl"></i>
+              <h5 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">
+                News
+              </h5>
+            </a>
+            <!-- //third dabba Music  -->
+            <a aria-label="button" onmouseover="speakElementDescription(this)"
+              class="bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400 rounded-lg border border-gray-200 dark:border-gray-700 divide-gray-200 dark:divide-gray-700 shadow-md flex max-w-sm flex-col hover:bg-gray-100 dark:hover:bg-gray-700 p-4 sm:p-6 items-center text-center"
+              href="./music/music.html"><i class="icon-text-size mb-2 text-gray-500 dark:text-gray-400 text-4xl"></i>
+              <h5 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">
+                Music
+              </h5>
+            </a>
+            <!-- // fourth dabba send email  -->
+            <a aria-label="button" onmouseover="speakElementDescription(this)"
+              class="bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400 rounded-lg border border-gray-200 dark:border-gray-700 divide-gray-200 dark:divide-gray-700 shadow-md flex max-w-sm flex-col hover:bg-gray-100 dark:hover:bg-gray-700 p-4 sm:p-6 items-center text-center"
+              href="./email/email.html"><i class="icon-shuffle mb-2 text-gray-500 dark:text-gray-400 text-4xl"></i>
+              <h5 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">
+                Send Email
+              </h5>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="p-4 bg-white shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 rounded-none">
+      <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023
+        <a href="#" target="_blank" class="hover:underline">Team xyz</a>
+        All Rights Reserved.</span>
+      <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+        <li class="mr-4 last:mr-0 md:mr-6">
+          <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+        </li>
+        <li class="mr-4 last:mr-0 md:mr-6">
+          <a href="#" class="hover:underline">Privacy Policy</a>
+        </li>
+      </ul>
+    </footer>
+  </div>
+
+  <script>
+    // <!-- // writing code for hover to speech -->
+    function speak(text) {
+      const utterance = new SpeechSynthesisUtterance(text);
+      window.speechSynthesis.speak(utterance);
+    }
+
+    function speak(text) {
+      const utterance = new SpeechSynthesisUtterance(text);
+      window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeaking() {
+      window.speechSynthesis.cancel();
+    }
+
+    function speakElementDescription(element) {
+      const description = element.getAttribute("aria-label");
+      const content = element.textContent;
+      speak(`${content}. ${description}`);
+      // Add an event listener to stop speaking when the cursor leaves the element
+      element.addEventListener("mouseout", stopSpeaking);
+    }
+
+    // keypress vala feature ky ly script
+    document.addEventListener("keydown", function (event) {
+      const key = event.key.toLowerCase();
+      if (key === "h") {
+        window.location.href = "./"; // Navigate to the Home page
+      } else if (key === "b") {
+        window.location.href = "./book/index.html"; // Navigate to the Contact page
+      } else if (key === "n") {
+        window.location.href =
+          "./newsss/news-website-main/news-website-main/index.html"; // Navigate to the Contact page
+      } else if (key === "m") {
+        window.location.href = "./music/music.html"; // Navigate to the Contact page
+      } else if (key === "e") {
+        window.location.href = "./email/email.html"; // Navigate to the Contact page
+      }
+    });
+
+    // Call the speak function when the website loads
+    window.addEventListener("load", function () {
+      speak(
+        "Welcome to our website. To Navigate on Email press E . Press N for News . Press M for Music . Press B for Book read  "
+      );
+    });
+  </script>
+</body>
+
+</html>

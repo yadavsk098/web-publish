@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+</head>
+
+<!--      npx tailwindcss -i ./src/input.css -o ./style.css --watch   -->
+
+<body class="bg-gray-400 min-h-screen flex flex-col items-center justify-center">
+    <div class="text-center">
+        <label for="pdfInput" class="text-lg text-gray-800">Upload a PDF file:</label>
+        <input aria-label="Browse button" onmouseover="speakElementDescription(this)" type="file" id="pdfInput" accept=".pdf" class="mt-2 p-2 border rounded" />
+        <button aria-label="read Button" onmouseover="speakElementDescription(this)" id="readButton" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600" disabled>
+            Read PDF
+        </button>
+        <div class="mt-4">
+            <canvas id="pdfViewer" class="border"></canvas>
+        </div>
+    </div>
+    <button aria-label="Previous Page button" onmouseover="speakElementDescription(this)"  id="prevPage" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600" disabled>
+        Previous Page
+    </button>
+    <button aria-label="Next Page button" onmouseover="speakElementDescription(this)" id="nextPage" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover-bg-blue-600" disabled>
+        Next Page
+    </button>
+    <button id="speakButton" class="mt-4 px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600" disabled>
+        Speak Page
+    </button>
+    
+    <p id="pageCount" class="mt-2 text-gray-800"></p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // speech ka code
+        function speak(text) {
+            const utterance = new SpeechSynthesisUtterance(text);
+            window.speechSynthesis.speak(utterance);
+        }
+
+        function speak(text) {
+            const utterance = new SpeechSynthesisUtterance(text);
+            window.speechSynthesis.speak(utterance);
+        }
+
+        function stopSpeaking() {
+            window.speechSynthesis.cancel();
+        }
+
+        function speakElementDescription(element) {
+            // const description = element.getAttribute("aria-label");
+            const content = element.textContent;
+            speak(`${content}`);
+            // Add an event listener to stop speaking when the cursor leaves the element
+            element.addEventListener("mouseout", stopSpeaking);
+        }
+    </script>
+</body>
+
+</html>
